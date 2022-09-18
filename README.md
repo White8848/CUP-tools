@@ -1,6 +1,8 @@
-# vue-project
+# CUP-tool 石大小工具
 
-This template should help get you started developing with Vue 3 in Vite.
+本项目基于Vue框架实现，使用了Vant组件库进行UI设计。
+
+若需要进行二次开发请参考以下内容。
 
 ## Recommended IDE Setup
 
