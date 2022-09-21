@@ -1,20 +1,24 @@
 {
   "assets": [],
+  "build": {
+    "build_number": 0,
+    "build_time": 0,
+    "release": false
+  },
   "encryptLevel": 0,
   "useFeatures": [],
   "launchConfig": {
     "displaySplash": true,
     "hideLogs": false,
-    "splashText": "Powered by Auto.js Pro",
     "stableMode": false
   },
   "main": "main.node.js",
-  "name": "My Project",
+  "name": "石大小工具", 
   "optimization": {
     "removeOpenCv": true,
     "unusedResources": true
   },
-  "packageName": "org.example.my_project",
+  "packageName": "com.cuptools.yirule",
   "scripts": {
     "build-apk-pre-prepare": "sh build.sh"
   },
@@ -26,8 +30,24 @@
       "android.permission.WAKE_LOCK",
       "android.permission.SYSTEM_ALERT_WINDOW"
     ],
-    "requestListOnStartup": [
-    ]
+    "requestListOnStartup": []
+  },
+  "publish": {
+    "category": "其他",
+    "details": "石油大学小工具",
+    "maxAutoJsVersion": 0,
+    "maxProVersion": 0,
+    "minAutoJsVersion": 0,
+    "minProVersion": 0,
+    "minSdkVersion": 0,
+    "permissions": [],
+    "summary": "石油大学小工具",
+    "tags": null
+  },
+  "features": {
+    "builtInOCR": null,
+    "activityIntentTasks": false,
+    "nodejs": "auto"
   },
   "ignore": [
     "build"

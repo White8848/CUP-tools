@@ -19,7 +19,6 @@ export default {
             checked2,
             checked3,
             checked4
-
         }
     }
 }
@@ -68,6 +67,10 @@ export default {
         <van-grid-item text="健康打卡" />
         <van-grid-item text="场馆预约" />
         <van-grid-item text="开发中..." />
+        <van-grid-item text="关闭脚本" />
+        <van-grid-item text="关闭脚本" />
+        <van-grid-item text="关闭脚本" />
+        <van-grid-item text="关闭脚本" />
         <van-grid-item text="关闭脚本" />
     </van-grid>
 </template>
