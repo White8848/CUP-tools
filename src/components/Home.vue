@@ -29,10 +29,11 @@ export default {
 <template>
     <van-nav-bar fixed title="石大小工具">
         <template #left>
-            <van-icon name="more-o" size="26" v-on:click="show=!show" />
+            <van-icon name="wap-nav" size="26" v-on:click="show=!show" />
         </template>
     </van-nav-bar>
     <div class="bar" :style="{height:'47px'}"></div>
+    <van-notice-bar left-icon="volume-o" mode="closeable" text="欢迎使用石大小工具APP，本工具由一位不愿透露姓名的石大学子开发开发。" />
     <van-popup class="home_popup" v-model:show="show" position="left" :style="{width: '70%',height:'100%'}">
         <van-image width="100%" height="30%"
             src="https://picx.zhimg.com/v2-896450e686794a4e118e444f64aaeeaf_1440w.jpg?source=172ae18b" />
@@ -63,13 +64,28 @@ export default {
             <van-image fill :src="image" height="110%" />
         </van-swipe-item>
     </van-swipe>
-    <van-grid direction="horizontal" :column-num="2" :border="false" :gutter="15" clickable square>
+    <van-space :size="20" fill :style="{top:'20px'}">
+        <van-space :size="20" direction="vertical" fill :style="{left:'10%'}">
+            <van-button to='/Report' icon="fire" color="#FF5844">健康打卡</van-button>
+            <van-button to='/Food' icon="map-marked" color="#80BEF5">美食地图</van-button>
+            <van-button icon="setting" color="#F7D78C">后勤服务</van-button>
+            <van-button icon="more" color="#F7D78C">更多功能</van-button>
+        </van-space>
+        <van-space :size="20" direction="vertical" fill>
+            <van-button to='/sport' icon="wap-home" color="#F79F77">场馆预约</van-button>
+            <van-button icon="star" color="#FF7530">学习资料</van-button>
+            <van-button icon="more" color="#F7D78C">更多功能</van-button>
+            <van-button icon="more" color="#F7D78C">更多功能</van-button>
+        </van-space>
+    </van-space>
+
+    <!-- <van-grid direction="horizontal" :column-num="2" :border="false" :gutter="15" clickable square>
         <van-grid-item to='/Report' text="健康打卡" />
         <van-grid-item to='/Sport' text="场馆预约" />
-        <van-grid-item to='/Sport' text="美食地图" />
+        <van-grid-item to='/Food' text="美食地图" />
         <van-grid-item text="开发中..." />
-        <!-- <van-grid-item text="关闭脚本" /> -->
-    </van-grid>
+        <van-grid-item text="关闭脚本" />
+    </van-grid> -->
 </template>
 
 <style scoped>
@@ -80,19 +96,33 @@ export default {
     background-color: rgba(187, 229, 249, 0.297);
 }
 
-.van-grid{
+.van-button {
+    box-shadow: 0 0 10px rgb(129, 129, 129);
+    height: 110px;
+    width: 90%;
+    border-radius: 20px;
+    font-size: 28px;
+}
+
+.van-grid {
     top: 15px;
     --van-grid-item-text-font-size: 25px;
     --van-grid-item-text-color: black;
     --van-grid-item-content-active-color: linear-gradient(to right bottom, #eebd89, #d13abd);
     --van-grid-item-content-background-color: linear-gradient(to right bottom, #eebd89, #d13abd);
 }
-.van-grid-item{
-    border-radius:20px;
+
+.van-grid-item {
+    border-radius: 20px;
+}
+
+.van-space {
+    text-align: center;
 }
 
 .van-nav-bar {
     background-color: rgba(255, 255, 255, .4);
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgb(129, 129, 129);
 }
 </style>

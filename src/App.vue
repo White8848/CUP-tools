@@ -23,12 +23,12 @@ export default {
 
 <style scoped>
 .my_tabbar {
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .2);
   backdrop-filter: blur(10px);
-  /* box-shadow: 0 0 5px #333; */
+  box-shadow: 0 0 5px rgb(129, 129, 129);
 }
 
 .van-tabbar-item {
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, .2);
 }
 </style>

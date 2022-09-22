@@ -11,7 +11,8 @@ import Home from './components/Home.vue'
 import Mod from './components/Mod.vue'
 import Settings from './components/Settings.vue'
 import Sport from './components/Sport.vue'
-import Sport from './components/Report.vue'
+import Report from './components/Report.vue'
+import Food from './components/Food.vue'
 
 
 const router = createRouter({
@@ -22,6 +23,8 @@ const router = createRouter({
         { path: '/Settings', component: Settings },
         { path: '/Sport', component: Sport },
         { path: '/Report', component: Report },
+        { path: '/Food', component: Food },
+
     ]
 })
 
