@@ -78,6 +78,7 @@ export default {
             <van-button icon="more" color="#F7D78C">更多功能</van-button>
         </van-space>
     </van-space>
+    <van-space :style="{height:'85px'}"/>
 
     <!-- <van-grid direction="horizontal" :column-num="2" :border="false" :gutter="15" clickable square>
         <van-grid-item to='/Report' text="健康打卡" />
