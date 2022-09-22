@@ -12,7 +12,8 @@ export default {
 </script>
 
 <template>
-  <van-tabbar fixed v-model="active" active-color="#ee0a24" inactive-color="#000" :style="{height:'70px'}">
+  <van-tabbar class="my_tabbar" fixed v-model="active" active-color="#ee0a24" inactive-color="#000"
+    :style="{height:'60px'}">
     <van-tabbar-item to="/" icon="home-o">主页</van-tabbar-item>
     <van-tabbar-item to="/Mod" icon="apps-o">插件</van-tabbar-item>
     <van-tabbar-item to="/settings" icon="setting-o">设置</van-tabbar-item>
@@ -21,5 +22,13 @@ export default {
 </template>
 
 <style scoped>
+.my_tabbar {
+  background-color: rgba(255, 255, 255, .4);
+  backdrop-filter: blur(10px);
+  /* box-shadow: 0 0 5px #333; */
+}
 
+.van-tabbar-item {
+  background-color: rgba(255, 255, 255, .4);
+}
 </style>

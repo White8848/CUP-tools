@@ -11,10 +11,10 @@ export default {
                 count.value++;
             }, 1000);
         };
-        const addMod = ()=>{
+        const addMod = () => {
 
         }
-        return{
+        return {
             count,
             isloading,
             onRefresh,
@@ -27,10 +27,12 @@ export default {
 <template>
     <van-nav-bar title="插件">
         <template #right>
-            <van-icon name="plus" size="26" v-on:click="addMod"/>
+            <van-icon name="plus" size="26" v-on:click="addMod" />
         </template>
     </van-nav-bar>
-    <van-search v-model="value" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" />
+    <van-sticky :offset-top="45">
+        <van-search v-model="value" shape="round" background="#4fc08d" placeholder="请输入搜索关键词" />
+    </van-sticky>
     <van-pull-refresh v-model="isLoading" success-text="刷新成功" @refresh="onRefresh" style="min-height: 80vh;">
         <van-cell-group inset>
             <van-cell title="单元格" value="内容" />
@@ -41,7 +43,12 @@ export default {
 </template>
 
 <style scoped>
-.van-cell-group{
-    top:15px;
+.van-cell-group {
+    top: 15px;
+}
+
+.van-nav-bar {
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(10px);
 }
 </style>
